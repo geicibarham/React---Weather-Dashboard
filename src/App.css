@@ -7,7 +7,20 @@
   justify-content: center;
 }
 
+header{
+  background-color: #333;
+  display:flex;
+  padding:10px;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+  
+}
 
+h1{
+  text-align: center;
+  margin:auto;
+}
 
 
 #dark {
@@ -22,7 +35,11 @@
   color: #61dafb;
 }
 
-
+.theme-description{
+color:red;
+margin-right: 8px;
+text-transform: capitalize;
+}
 .test{
   padding:100px;
   background-color: blue;
@@ -32,11 +49,15 @@
 }
 
 .switch {
-  display: flex;
-  width: 100vw;
-  height: 100px;
+display:flex;
+align-self: baseline;
+  /* width: 100vw;
+  height: 100px; */
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
+
+
 }
 
 .switch label {
@@ -66,12 +87,12 @@
   margin:auto;
   border-radius: 20px;
 }
-.switch {
+/* .switch {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
-}
+} */
 
 /* Hide default HTML checkbox */
 .switch input {
@@ -105,34 +126,7 @@
   transition: .4s;
 }
 
-input:checked+.slider {
-  background-color: #9f8ef6;
-}
-
-input:focus+.slider {
-  box-shadow: 0 0 1px #f48ef6;
-}
-
-input:checked+.slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
 
 #dark > div.switch > div > div.react-switch-bg{
   background-color: pink!important;
-}
-.switch-container{
-  display:flex;
-  padding:20px;
-  justify-content: end;
 }
