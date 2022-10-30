@@ -1,14 +1,14 @@
 
 import './App.css';
-
 import { React, useState, useEffect, createContext } from 'react';
 import ReactSwitch from 'react-switch';
-
+import Search from './components/Search/Search';
 export const ThemeContext = createContext(null);
+
 
 function App() {
 
-  const [theme, setTheme] = useState('dark')
+  const [theme, setTheme] = useState('light')
   const [mode, setMode] = useState('')
 
   const toggleTheme = () => {
@@ -20,8 +20,6 @@ function App() {
     if (theme === 'dark') {
       setMode('dark')
     }
-
-    console.log(theme)
     if (theme === 'light') {
       setMode('light')
     }
@@ -38,7 +36,7 @@ function App() {
           <h1>Weather Dashboard</h1>
 
           <div className='switch'>
-            {/* <span className='theme-description'>Mode</span> */}
+          
             <span className='theme-description'>{mode} Mode</span>
             <ReactSwitch
 
@@ -47,10 +45,8 @@ function App() {
           </div>
         </header>
 
+        <Search />
 
-        <div className='test'>
-          test
-        </div>
       </div>
     </ThemeContext.Provider >
   );

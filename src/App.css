@@ -24,19 +24,19 @@ h1{
 
 
 #dark {
-  background-color: purple;
+  background-color: #1b3764;
   color: #fff;
 }
 #light {
-  background-color: hotpink;
-  color: #333;
+  background-color: #35bcbf;
+  color: #fff;
 }
 .App-link {
   color: #61dafb;
 }
 
 .theme-description{
-color:red;
+color:white;
 margin-right: 8px;
 text-transform: capitalize;
 }
