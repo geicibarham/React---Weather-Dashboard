@@ -87,14 +87,7 @@ align-self: baseline;
   margin:auto;
   border-radius: 20px;
 }
-/* .switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-} */
 
-/* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
   width: 0;
@@ -129,4 +122,21 @@ align-self: baseline;
 
 #dark > div.switch > div > div.react-switch-bg{
   background-color: pink!important;
+}
+
+
+.cloudy{
+
+  background-image: url('./assets/images/cloudy.jpg');
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.clear{
+
+  background-image: url('./assets/images/clear.jpg');
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
