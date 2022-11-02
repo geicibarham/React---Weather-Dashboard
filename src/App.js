@@ -8,6 +8,7 @@ function App() {
   const [theme, setTheme] = useState("light");
   const [mode, setMode] = useState("");
   const [weatherType, setWeathertype] = useState("");
+  const [icon, setIcon] = useState("")
   const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
   };
@@ -22,22 +23,40 @@ function App() {
 
   // this function is passed as props to the serach component to get the current weather:sunny,rainy etc
   const getCurrentWeather = (current) => {
-    // console.log(current.current.weather[0].main);
-    setWeathertype(current.current.weather[0].main);
 
+    setWeathertype(current.current.weather[0].description);
+    setIcon(current.current.weather[0].icon)
+    console.log(current.current)
   };
-console.log(weatherType)
+  console.log(weatherType)
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {/* utilizing ternary to determine type of sky and type of class */}
-      <section className={weatherType === "Clouds" ? "cloudy" :
-      weatherType === "Clear" ? "clear" :
-      ""}>
-        <div className="App" id={theme}>
 
+      <div className="App" id={theme}>
+        <section className=
+          {
+            weatherType === "clear sky" && icon === "01n" ? "clearNight" :
+              weatherType === "clear sky" && icon === "01d" ? "sunny" :
+              weatherType === "few clouds" && icon === "02d" ?"fewCloudsday" :
+              weatherType === "few clouds" && icon === "02n" ?"cloudyNight" :
+              weatherType === "scattered clouds" && icon === "03d" ?"scateredDay" :
+              weatherType === "scattered clouds" && icon === "03n" ?"scateredNight" :
+              weatherType === "broken clouds" && icon === "04d" ?"brokenDay" :
+              weatherType === "broken clouds" && icon === "04n" ?"brokenNight" :
+              weatherType === "shower rain" && icon === "09d" ?"showerDay" :
+              weatherType === "shower rain" && icon === "09n" ?"showerNight" :
+              weatherType === "rain" && icon === "10d" ?"rainDay" :
+              weatherType === "rain" && icon === "10n" ?"rainNight" :
+              weatherType === "thunderstorm" && icon === "11d" ?"thunderDay" :
+              weatherType === "thunderstorm" && icon === "11d" ?"thunderNight" :
+              weatherType === "snow" && icon === "13d" ?"snowDay" :
+              weatherType === "snow" && icon === "13d" ?"snowNight" :
+              
+                ""}>
           <header>
             <h1>Weather Dashboard</h1>
-        
+
             <div className="switch">
               <span className="theme-description">{mode} Mode</span>
               <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
@@ -45,9 +64,9 @@ console.log(weatherType)
           </header>
 
           <Search getCurrentWeather={getCurrentWeather} />
+        </section>
+      </div>
 
-        </div>
-      </section>
     </ThemeContext.Provider>
   );
 }

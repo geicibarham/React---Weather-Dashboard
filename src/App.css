@@ -124,8 +124,14 @@ align-self: baseline;
   background-color: pink!important;
 }
 
+.fewCloudsday{
 
-.cloudy{
+  background-image: url('./assets/images/fewcloudsDay.jpg');
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cloudyDay{
 
   background-image: url('./assets/images/cloudy.jpg');
   min-height: 100vh;
@@ -133,9 +139,106 @@ align-self: baseline;
   background-size: cover;
 }
 
-.clear{
+.clearNight{
 
   background-image: url('./assets/images/clear.jpg');
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sunny{
+
+  background-image: url('./assets/images/sunny.jpg');
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cloudyNight{
+  background-image: url('./assets/images/nightFewclouds.jpg');
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.scateredDay{
+  background-image: url('./assets/images/scateredDay.jpg');
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.scateredNight{
+  background-image: url('./assets/images/scateredNight.jpg');
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.brokenDay{
+  background-image: url('./assets/images/brokenday.jpg');
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.brokenNight{
+  background-image: url('./assets/images/brokenEvening.jpg');
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.showerDay{
+  background-image: url('./assets/images/rainshowerDay.jpg');
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.showerNight{
+  background-image: url('./assets/images/rainShowernight.jpg');
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rainDay{
+  background-image: url('./assets/images/rainNight.jpg');
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rainNight{
+  background-image: url('./assets/images/rainNight.jpg');
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.thunderDay{
+  background-image: url('./assets/images/thunderDay.jpg');
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.thunderNight{
+  background-image: url('./assets/images/thunderNight.jpg');
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.snowDay{
+  background-image: url('./assets/images/snowday.jpg');
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.snowNight{
+  background-image: url('./assets/images/snownight.jpg');
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;

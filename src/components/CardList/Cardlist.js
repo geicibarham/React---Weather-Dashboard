@@ -11,11 +11,11 @@ const Cardlist = (props) => {
 
   return (
     <section
-      className={
-        props.Weatherdata.current.weather[0].main === "Clouds" ? "cloudy" : 
-        props.Weatherdata.current.weather[0].main ==="Clear" ? "clear" :
-        ""
-      }
+      // className={
+      //   props.Weatherdata.current.weather[0].main === "Clouds" ? "cloudy" : 
+      //   props.Weatherdata.current.weather[0].main ==="Clear" ? "clear" :
+      //   ""
+      // }
     >
       <div className="current-weather-outer-container">
         <div className="current-weather">
