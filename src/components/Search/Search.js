@@ -2,8 +2,6 @@ import { React, useState, useEffect } from "react";
 import "./search.css";
 import axios from "axios";
 import Cardlist from "../CardList/Cardlist";
-
-import { TiWeatherSnow } from "react-icons/ti";
 const Search = (props) => {
   const [city, setCity] = useState("");
   const [Weatherdata, setdata] = useState([]);
@@ -29,7 +27,7 @@ const Search = (props) => {
     });
   };
 
-  // console.log(Weatherdata)
+  console.log(Weatherdata);
   const getForecast = (data) => {
     const lat = data.lat;
     const lon = data.long;
@@ -41,11 +39,9 @@ const Search = (props) => {
 
       // calling function coming from app.js
       props.getCurrentWeather(res.data);
-      console.log(current)
+      console.log(current);
     });
-
   };
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -54,12 +50,11 @@ const Search = (props) => {
   };
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         {/* <TiWeatherSnow /> */}
         <div>
-
-          <input value={city} onChange={handleChange} type="text" />
-
+          
+          <input placeholder="Enter The City"size="50" value={city} onChange={handleChange} type="text" />
         </div>
         <button type="submit">Search</button>
       </form>

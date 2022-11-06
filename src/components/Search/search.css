@@ -1,0 +1,30 @@
+.form{
+    display: flex;
+    justify-content: center;
+}
+
+.form button{
+    border:none;
+    padding:10px;
+    border-radius: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#dark .form button{
+    background-color: black;
+    color:white;
+
+}
+.form input{
+    min-width: 100% !important;
+    border: none;
+    border-radius: 3px;
+    height: 100%;
+    size:50;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus {
+    border: none;
+  }
