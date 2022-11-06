@@ -88,7 +88,7 @@ function App() {
         >
           <header>
             <h1>
-              Weather Dashboard
+              Weather Dashboard &nbsp; &nbsp; 
               <img width="50px" src={weatherIcon} alt="weather icon" />
             </h1>
             <div className="switch">
@@ -100,8 +100,10 @@ function App() {
           <Search getCurrentWeather={getCurrentWeather} />
         </section>
       
+     
       </div>
-      <Footer />
+     <Footer />
+    
     </ThemeContext.Provider>
   );
 }

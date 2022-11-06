@@ -1,6 +1,7 @@
 .form{
     display: flex;
     justify-content: center;
+
 }
 
 .form button{
@@ -25,10 +26,16 @@
     box-sizing: border-box;
 }
 
-input[type=text]:focus {
-    border: none;
-  }
+
 
   @media screen and (max-width:768px) {
  
+    .form input{
+        background-color: pink;
+
+       
+    }
+
+
+
   }
