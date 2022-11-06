@@ -1,7 +1,6 @@
 .current-weather-outer-container {
   display: flex;
   justify-content: center;
-
 }
 
 .lowUv {
@@ -10,7 +9,7 @@
   border-radius: 10px;
 }
 .mediumUv {
-  background-color:#f0d43a;
+  background-color: #f0d43a;
   padding: 5px;
   border-radius: 10px;
 }
@@ -40,10 +39,11 @@
   border-radius: 10px;
   margin-top: 20px;
   padding: 20px;
+  border: solid 1px white;
 }
 
 #light .current-weather {
-    background-color: rgba(255, 255, 255, 0.49);
+  background-color: rgba(255, 255, 255, 0.49);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,8 +51,8 @@
   border-radius: 10px;
   margin-top: 20px;
   padding: 20px;
-  color:black;
-  
+  color: black;
+  border: solid 1px black;
 }
 
 .cloudy {
@@ -70,31 +70,51 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   justify-items: center;
+  margin-bottom: 10px;
 }
 
-#dark .weather-card{
-    background-color: rgba(12, 11, 11, 0.647);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 60%;
-    border-radius: 10px;
-    margin-top: 20px;
-    padding: 20px;
-    color:white;
-    border: solid 1px white;
+#dark .weather-card {
+  background-color: rgba(12, 11, 11, 0.647);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 65%;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 20px;
+  color: white;
+  line-height: 2;
+  border: solid 1px white;
 }
 
+#light .weather-card {
+  background-color: rgba(251, 251, 251, 0.312);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 65%;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 20px;
+  line-height: 2;
+  color: black;
+  border: solid 1px black;
+}
 
-#light .weather-card{
-    background-color: rgba(251, 251, 251, 0.312);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 60%;
-    border-radius: 10px;
-    margin-top: 20px;
-    padding: 20px;
-    color:black;
-    border: solid 1px black;
+@media screen and (max-width: 768px) {
+  .cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .weather-card {
+    margin-bottom: 10px;
+  }
+
+  #light .current-weather {
+    width: 80%;
+  }
+  #dark .current-weather {
+    width: 80%;
+  }
 }

@@ -77,6 +77,7 @@ const Cardlist = (props) => {
               <img width="12px" src={downarrow} alt="down arrow" />
               {day.temp.min}°F</span>
             <span>Humidity {day.humidity}%</span>
+            <span>Wind Speed: {day.wind_speed} Mph</span>
           </section>
         ))}
       </article>

@@ -3,6 +3,7 @@ import { React, useState, useEffect, createContext } from "react";
 import ReactSwitch from "react-switch";
 import Search from "./components/Search/Search";
 import weatherIcon from "./assets/images/weather.png";
+import Footer from "./components/footer/Footer";
 export const ThemeContext = createContext(null);
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
     }
   }, [theme]);
 
-  // this function is passed as props to the serach component to get the current weather:sunny,rainy etc
+  // this function is passed as props to the search component to get the current weather:sunny,rainy etc
   const getCurrentWeather = (current) => {
     setWeathertype(current.current.weather[0].description);
     setIcon(current.current.weather[0].icon);
@@ -44,14 +45,22 @@ function App() {
               ? "fewCloudsday"
               : weatherType === "few clouds" && icon === "02n"
               ? "cloudyNight"
+              : weatherType === "overcast clouds" && [icon === "03d" || icon === "04d"]
+              ? "cloudyDay"
               : weatherType === "scattered clouds" && icon === "03d"
               ? "scateredDay"
-              : weatherType === "scattered clouds" && icon === "03n"
+              : [
+                  weatherType === "scattered clouds" ||
+                    weatherType === "overcast clouds",
+                ] && icon === "03n"
               ? "scateredNight"
-              : weatherType === "broken clouds" && icon === "04d"
-              ? "brokenDay"
-              : weatherType === "broken clouds" && icon === "04n"
+              : [
+                  weatherType === "broken clouds" ||
+                    weatherType === "overcast clouds",
+                ] && icon === "04n"
               ? "brokenNight"
+              
+              :weatherType === "broken clouds" && icon === "04d" ? "brokenDay"
               : weatherType === "shower rain" && icon === "09d"
               ? "showerDay"
               : weatherType === "shower rain" && icon === "09n"
@@ -90,7 +99,9 @@ function App() {
 
           <Search getCurrentWeather={getCurrentWeather} />
         </section>
+      
       </div>
+      <Footer />
     </ThemeContext.Provider>
   );
 }

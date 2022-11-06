@@ -1,65 +1,64 @@
 .App {
   text-align: center;
-  min-height: 100vh;
-  border:0;
-  padding:0;
- 
+  min-height: 95vh;
+  border: 0;
+  padding: 0;
+
   justify-content: center;
 }
 
-header{
-  background-color: rgba(15, 15, 15, 0.675);
+div.react-switch-bg {
+  background-color: #00f8fe !important;
+}
+header {
   /* background-color: #1b376457; */
-  display:flex;
-  padding:10px;
+  display: flex;
+  padding: 10px;
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 10px;
-  
 }
 
-h1{
+#dark header {
+  background-color: rgba(12, 11, 11, 0.647);
+}
+
+#light header {
+  background-color: rgba(255, 255, 255, 0.418);
+}
+h1 {
   text-align: center;
-  margin:auto;
+  margin: auto;
   align-self: center;
 }
-
 
 #dark {
   background-color: #1b3764;
   color: #fff;
+ 
 }
 #light {
   background-color: #35bcbf;
   color: #fff;
+ 
 }
 .App-link {
   color: #61dafb;
 }
 
-.theme-description{
-color:white;
-margin-right: 8px;
-text-transform: capitalize;
+.theme-description {
+  color: white;
+  margin-right: 8px;
+  text-transform: capitalize;
 }
-.test{
-  padding:100px;
-  background-color: blue;
-  width: fit-content;
-  margin:auto;
-  border-radius: 20px;
-}
-
 .switch {
-display:flex;
-align-self: baseline;
+  display: flex;
+  align-self: baseline;
   /* width: 100vw;
   height: 100px; */
   justify-content: center;
   align-items: center;
   margin-top: 10px;
-
-
 }
 
 .switch label {
@@ -73,20 +72,11 @@ align-self: baseline;
 #dark .switch label {
   color: white;
 }
-#light .test{
-  padding:100px;
+#light .test {
+  padding: 100px;
   background-color: rgba(255, 0, 191, 0.342);
   width: fit-content;
-  margin:auto;
-  border-radius: 20px;
-}
-
-#dark .test{
-  color:black;
-  padding:100px;
-  background-color: yellow;
-  width: fit-content;
-  margin:auto;
+  margin: auto;
   border-radius: 20px;
 }
 
@@ -105,8 +95,8 @@ align-self: baseline;
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -117,147 +107,189 @@ align-self: baseline;
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-
-#dark > div.switch > div > div.react-switch-bg{
-  background-color: pink!important;
+#dark > div.switch > div > div.react-switch-bg {
+  background-color: pink !important;
 }
 
-.fewCloudsday{
-
-  background-image: url('./assets/images/fewcloudsDay.jpg');
+.fewCloudsday {
+  background-image: url("./assets/images/fewcloudsDay.jpg");
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.cloudyDay{
-
-  background-image: url('./assets/images/cloudy.jpg');
-  min-height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.clearNight{
-
-  background-image: url('./assets/images/clear.jpg');
+.cloudyDay {
+  background-image: url("./assets/images/cloudy.jpg");
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.sunny{
-
-  background-image: url('./assets/images/sunny.jpg');
+.clearNight {
+  background-image: url("./assets/images/clear.jpg");
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.cloudyNight{
-  background-image: url('./assets/images/nightFewclouds.jpg');
+.sunny {
+  background-image: url("./assets/images/sunny.jpg");
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.scateredDay{
-  background-image: url('./assets/images/scateredDay.jpg');
+.cloudyNight {
+  background-image: url("./assets/images/nightFewclouds.jpg");
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.scateredNight{
-  background-image: url('./assets/images/scateredNight.jpg');
+.scateredDay {
+  background-image: url("./assets/images/scateredDay.jpg");
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.brokenDay{
-  background-image: url('./assets/images/brokenday.jpg');
+.scateredNight {
+  background-image: url("./assets/images/scateredNight.jpg");
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.brokenNight{
-  background-image: url('./assets/images/brokenEvening.jpg');
+.brokenDay {
+  background-image: url("./assets/images/brokenday.jpg");
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.showerDay{
-  background-image: url('./assets/images/rainshowerDay.jpg');
+.brokenNight {
+  background-image: url("./assets/images/brokenEvening.jpg");
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.showerNight{
-  background-image: url('./assets/images/rainShowernight.jpg');
+.showerDay {
+  background-image: url("./assets/images/rainshowerDay.jpg");
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.rainDay{
-  background-image: url('./assets/images/rainDay.jpg');
+.showerNight {
+  background-image: url("./assets/images/rainShowernight.jpg");
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.rainNight{
-  background-image: url('./assets/images/rainNight.jpg');
+.rainDay {
+  background-image: url("./assets/images/rainDay.jpg");
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.thunderDay{
-  background-image: url('./assets/images/thunderDay.jpg');
+.rainNight {
+  background-image: url("./assets/images/rainNight.jpg");
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.thunderNight{
-  background-image: url('./assets/images/thunderNight.jpg');
-  min-height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.snowDay{
-  background-image: url('./assets/images/snowday.jpg');
-  min-height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.snowNight{
-  background-image: url('./assets/images/snownight.jpg');
+.thunderDay {
+  background-image: url("./assets/images/thunderDay.jpg");
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.mist{
-  background:linear-gradient(0deg, rgba(9, 9, 9, 0.781), rgba(12, 12, 12, 0.473)),
-  url('./assets/images/fog-g9107571df_1920.jpg');
+.thunderNight {
+  background-image: url("./assets/images/thunderNight.jpg");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.snowDay {
+  background-image: url("./assets/images/snowday.jpg");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.snowNight {
+  background-image: url("./assets/images/snownight.jpg");
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.moderateRain{
-  background:linear-gradient(0deg, rgba(9, 9, 9, 0.199), rgba(12, 12, 12, 0.092)),
-  url('./assets/images/moderateRain.jpg');
+.mist {
+  background: linear-gradient(
+      0deg,
+      rgba(9, 9, 9, 0.781),
+      rgba(12, 12, 12, 0.473)
+    ),
+    url("./assets/images/fog-g9107571df_1920.jpg");
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.moderateRain {
+  background: linear-gradient(
+      0deg,
+      rgba(9, 9, 9, 0.199),
+      rgba(12, 12, 12, 0.092)
+    ),
+    url("./assets/images/moderateRain.jpg");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.overcastDay {
+  background: linear-gradient(
+      0deg,
+      rgba(9, 9, 9, 0.199),
+      rgba(12, 12, 12, 0.092)
+    ),
+    url("./assets/images/overcastDay.jpg");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .App {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 105vh;
+    justify-content: center;
+  }
+
+  header {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  #light {
+    display: flex;
+    background-color: #35bcbf;
+    color: #fff;
+    min-width: fit-content;
+  }
+
+  #dark {
+    display: flex;
+    background-color: #1b3764;
+    color: #fff;
+    min-width: fit-content;
+  }
 }
