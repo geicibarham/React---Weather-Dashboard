@@ -1,4 +1,3 @@
-import axios from "axios";
 import moment from "moment/moment";
 import { React} from "react";
 import "./cardlist.css";
