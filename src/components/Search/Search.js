@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import { React, useState} from "react";
 import "./search.css";
 import axios from "axios";
 import Cardlist from "../CardList/Cardlist";
@@ -6,7 +6,7 @@ const Search = (props) => {
   const [city, setCity] = useState("");
   const [Weatherdata, setdata] = useState([]);
   const [citytoDisplay, setcityTodisplay] = useState("");
-  const [current, setCurrent] = useState("");
+ 
 
   const handleChange = (e) => {
     setCity(e.target.value);
@@ -39,7 +39,7 @@ const Search = (props) => {
 
       // calling function coming from app.js
       props.getCurrentWeather(res.data);
-      console.log(current);
+     
     });
   };
 
