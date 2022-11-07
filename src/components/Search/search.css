@@ -13,7 +13,7 @@
 }
 
 #dark .form button{
-    background-color: black;
+    background-color: #005792;
     color:white;
 
 }
@@ -31,7 +31,7 @@
   @media screen and (max-width:768px) {
  
     .form input{
-        background-color: pink;
+      width: 300px;
 
        
     }

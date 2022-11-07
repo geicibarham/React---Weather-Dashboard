@@ -1,6 +1,7 @@
 .current-weather-outer-container {
   display: flex;
   justify-content: center;
+  line-height: 2;
 }
 
 .lowUv {

@@ -1,22 +1,29 @@
-footer{
-    display: flex;
-    padding:20px;
-    justify-content: center;
-    background-color: darkblue;
-    color:white;
-    height: 100%;
+footer {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  background-color: #005689;
+  color: white;
+  height: 100%;
 }
 
-footer p{
-    font-size:9px;
-    font-weight: lighter;
+.footerLight {
+  background-color: #bde4f4;
+  color: #191970;
 }
 
-@media screen and (max-width:768px) {
-    footer{
-        width: 100%;
-        
-        min-height: 100%;
-      
-    }
+.footerDark {
+  background-color: #121a2a;
+}
+
+footer p {
+  font-size: 9px;
+  font-weight: lighter;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    width: 100%;
+    min-height: 100%;
+  }
 }

@@ -11,8 +11,16 @@ function App() {
   const [mode, setMode] = useState("");
   const [weatherType, setWeathertype] = useState("");
   const [icon, setIcon] = useState("");
+
   const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
+
+    if (theme === "dark") {
+      setMode("dark");
+    }
+    if (theme === "light") {
+      setMode("light");
+    }
   };
   useEffect(() => {
     if (theme === "dark") {
@@ -27,7 +35,6 @@ function App() {
   const getCurrentWeather = (current) => {
     setWeathertype(current.current.weather[0].description);
     setIcon(current.current.weather[0].icon);
-    console.log(current.current);
   };
   console.log(weatherType);
   return (
@@ -45,7 +52,9 @@ function App() {
               ? "fewCloudsday"
               : weatherType === "few clouds" && icon === "02n"
               ? "cloudyNight"
-              : weatherType === "overcast clouds" && [icon === "03d" || icon === "04d"]
+              : weatherType === "overcast clouds" && [
+                  icon === "03d" || icon === "04d",
+                ]
               ? "cloudyDay"
               : weatherType === "scattered clouds" && icon === "03d"
               ? "scateredDay"
@@ -59,8 +68,8 @@ function App() {
                     weatherType === "overcast clouds",
                 ] && icon === "04n"
               ? "brokenNight"
-              
-              :weatherType === "broken clouds" && icon === "04d" ? "brokenDay"
+              : weatherType === "broken clouds" && icon === "04d"
+              ? "brokenDay"
               : weatherType === "shower rain" && icon === "09d"
               ? "showerDay"
               : weatherType === "shower rain" && icon === "09n"
@@ -77,7 +86,8 @@ function App() {
               ? "thunderDay"
               : weatherType === "thunderstorm" && icon === "11d"
               ? "thunderNight"
-              : weatherType === "snow" && icon === "13d"
+              : [weatherType === "snow" || weatherType === "light snow"] &&
+                icon === "13d"
               ? "snowDay"
               : weatherType === "snow" && icon === "13d"
               ? "snowNight"
@@ -88,7 +98,7 @@ function App() {
         >
           <header>
             <h1>
-              Weather Dashboard &nbsp; &nbsp; 
+              Weather Dashboard &nbsp; &nbsp;
               <img width="50px" src={weatherIcon} alt="weather icon" />
             </h1>
             <div className="switch">
@@ -99,11 +109,8 @@ function App() {
 
           <Search getCurrentWeather={getCurrentWeather} />
         </section>
-      
-     
       </div>
-     <Footer />
-    
+      <Footer theme={theme} />
     </ThemeContext.Provider>
   );
 }
