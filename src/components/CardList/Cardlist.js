@@ -1,8 +1,8 @@
 import moment from "moment/moment";
-import { React} from "react";
+import { React } from "react";
 import "./cardlist.css";
-import downarrow from '../../assets/images/down-arrow.png'
-import uparrow from '../../assets/images/up-arrow-37.png'
+import downarrow from "../../assets/images/down-arrow.png";
+import uparrow from "../../assets/images/up-arrow-37.png";
 const Cardlist = (props) => {
   if (props.Weatherdata.length === 0) {
     return <h2>Enter the city to get started</h2>;
@@ -28,22 +28,33 @@ const Cardlist = (props) => {
           </h3>
           <span>Temperature: {props.Weatherdata.current.temp}°F</span>
 
+          <span>
+            <img width="16px" src={uparrow} alt="up arrow" />
+            
+            {props.Weatherdata.daily[0].temp.max}°F
+          </span>
+          <span>
+            {" "}
+            <img width="16px" src={downarrow} alt="up arrow" />
+            {props.Weatherdata.daily[0].temp.min}°F
+          </span>
+
           <span
             className={
               props.Weatherdata.current.uvi < 3
                 ? "lowUv"
                 : props.Weatherdata.current.uvi >= 3 &&
                   props.Weatherdata.current.uvi <= 5
-                  ? "mediumUv"
-                  : props.Weatherdata.current.uvi > 5 &&
-                    props.Weatherdata.current.uvi < 8
-                    ? "highUv"
-                    : props.Weatherdata.current.uvi >= 8 &&
-                      props.Weatherdata.current.uvi < 11
-                      ? "veryhighUv"
-                      : props.Weatherdata.current.uvi > 11
-                        ? "extremeUv"
-                        : ""
+                ? "mediumUv"
+                : props.Weatherdata.current.uvi > 5 &&
+                  props.Weatherdata.current.uvi < 8
+                ? "highUv"
+                : props.Weatherdata.current.uvi >= 8 &&
+                  props.Weatherdata.current.uvi < 11
+                ? "veryhighUv"
+                : props.Weatherdata.current.uvi > 11
+                ? "extremeUv"
+                : ""
             }
           >
             Current Uvi : {props.Weatherdata.current.uvi}
@@ -53,7 +64,7 @@ const Cardlist = (props) => {
         </div>
       </div>
       <article className="cards-container">
-        {props.Weatherdata.daily.slice(0, 5).map((day,index) => (
+        {props.Weatherdata.daily.slice(1, 6).map((day, index) => (
           <section className="weather-card" key={day.temp.max}>
             <img
               className="icon"
@@ -63,18 +74,18 @@ const Cardlist = (props) => {
                 "@2x.png"
               }
               alt="weather icon"
-
-
             />
-            {
-              moment().add(index + 1, 'day').format('M/D/YYYY')
-            }
+            {moment()
+              .add(index + 1, "day")
+              .format("M/D/YYYY")}
             <span>
-              <img width="16px"src={uparrow} alt="up arrow" />
-              {day.temp.max}°F</span>
+              <img width="16px" src={uparrow} alt="up arrow" />
+              {day.temp.max}°F
+            </span>
             <span>
               <img width="16px" src={downarrow} alt="down arrow" />
-              {day.temp.min}°F</span>
+              {day.temp.min}°F
+            </span>
             <span>Humidity {day.humidity}%</span>
             <span>Wind Speed: {day.wind_speed} Mph</span>
           </section>

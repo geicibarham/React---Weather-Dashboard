@@ -1,6 +1,7 @@
 .current-weather-outer-container {
   display: flex;
   justify-content: center;
+
  
 }
 
@@ -41,6 +42,7 @@
   margin-top: 15px;
   padding: 15px;
   border: solid 1px white;
+  line-height: 1.5;
 }
 
 #light .current-weather {
@@ -55,6 +57,7 @@
   color: black;
   border: solid 1px black;
   font-weight: 500;
+  
 }
 
 .cloudy {
@@ -72,7 +75,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   justify-items: center;
- /* padding:20px; */
+ padding:10px;
+
 }
 
 #dark .weather-card {
@@ -116,8 +120,8 @@
   }
 
   #light .current-weather {
-    width: fit-content;
-    height: 80%;
+    width: 80%;
+    
   }
   #dark .current-weather {
     width: 80%;
