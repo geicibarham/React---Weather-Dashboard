@@ -70,10 +70,10 @@ const Cardlist = (props) => {
               moment().add(index + 1, 'day').format('M/D/YYYY')
             }
             <span>
-              <img width="12px"src={uparrow} alt="up arrow" />
+              <img width="16px"src={uparrow} alt="up arrow" />
               {day.temp.max}°F</span>
             <span>
-              <img width="12px" src={downarrow} alt="down arrow" />
+              <img width="16px" src={downarrow} alt="down arrow" />
               {day.temp.min}°F</span>
             <span>Humidity {day.humidity}%</span>
             <span>Wind Speed: {day.wind_speed} Mph</span>
