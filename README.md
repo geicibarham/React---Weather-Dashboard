@@ -8,11 +8,17 @@ The Application renders dinamic backgrounds, depending on the current weather an
 </p>
 
 
+<img src="https://github.com/geicibarham/React---Weather-Dashboard/blob/main/src/assets/images/Screenshot%20(181).png" alt="dinamic backgrounds" />
+<br>
+<br>
 <img src="https://github.com/geicibarham/React---Weather-Dashboard/blob/main/src/assets/images/example.png"  alt="image if weather dashboard"/>
 <p>Application on dark mode</p>
-
+<br>
+<br>
 <img src="https://github.com/geicibarham/React---Weather-Dashboard/blob/main/src/assets/images/example1.png" alt="image if weather dashboard" />
 <p>Application on light mode</p>
+<br>
+<br>
 ## Technologies
 
 <ul>
